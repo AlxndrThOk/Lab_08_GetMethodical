@@ -1,5 +1,3 @@
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
 import java.util.Scanner;
 
 
@@ -107,7 +105,7 @@ public class SafeInput
     }
 
 
-    public static double getRangedInt(Scanner pipe, String prompt, double low, double high)
+    public static double getRangedDouble(Scanner pipe, String prompt, double low, double high)
     {
         double retDouble = 0;
         String trash;
@@ -117,7 +115,7 @@ public class SafeInput
         {
             System.out.print("\n" + prompt + " [" + low + " - " + high + "]: ");
 
-            if (pipe.hasNextInt())
+            if (pipe.hasNextDouble())
             {
                 retDouble = pipe.nextDouble();
                 pipe.nextLine();
